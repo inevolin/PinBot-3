@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pinbot3.BoardsController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="450" prefWidth="370">
+            <VBox>                
+                <HBox alignment="CENTER">
+                    <ListView fx:id="lstBoards" />
+                    <VBox.margin>
+                        <Insets top="20" />
+                    </VBox.margin>
+                </HBox>
+                <GridPane>
+                    <rowConstraints>
+                        <RowConstraints prefHeight="20" /> 
+                        <RowConstraints prefHeight="100" /> 
+                    </rowConstraints>
+                    <children>      
+                        <Button fx:id="btnAdd" GridPane.columnIndex="0" GridPane.rowIndex="0" text="add..." />
+                        <Button fx:id="btnEdit" GridPane.columnIndex="1" GridPane.rowIndex="0" text="edit..." />           
+                        <Button fx:id="btnDelete" GridPane.columnIndex="2" GridPane.rowIndex="0" text="delete" />                        
+                        <Label fx:id="lblStatus" text="status" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10" bottom="10" /> 
+                    </VBox.margin>
+                </GridPane>
+            </VBox>
+        </HBox>
+    </children>
+
+</AnchorPane>

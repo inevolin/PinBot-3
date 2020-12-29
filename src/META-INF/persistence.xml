@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="PinBot3PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>model.Account</class>
+        <class>model.Proxy</class>
+        <class>model.Campaign</class>
+        <class>model.configurations.AConfiguration</class>
+        <class>model.configurations.PinConfiguration</class>
+        <class>model.configurations.RepinConfiguration</class>
+        <class>model.configurations.LikeConfiguration</class>
+        <class>model.configurations.CommentConfiguration</class>
+        <class>model.configurations.FollowConfiguration</class>
+        <class>model.configurations.UnfollowConfiguration</class>
+        <class>model.configurations.InviteConfiguration</class>
+        <class>model.configurations.MessageConfiguration</class>
+        <class>model.pinterestobjects.PinterestObject</class>        
+        <class>model.pinterestobjects.Pin</class>
+        <class>model.pinterestobjects.Board</class>
+        <class>model.pinterestobjects.Pinner</class>
+        <class>model.pinterestobjects.Interest</class>
+        <class>model.pinterestobjects.Comment</class>
+        <class>model.configurations.queries.AQuery</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:./db/db;create=true"/>
+            <property name="javax.persistence.jdbc.url.shutdown" value="jdbc:derby:./db/db;shutdown=true;"/>
+            <property name="javax.persistence.jdbc.user" value="test"/>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+            <property name="javax.persistence.jdbc.password" value="test"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.logging.logger" value="DefaultLogger"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
+        </properties>
+    </persistence-unit>
+</persistence>

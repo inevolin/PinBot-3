@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="342.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="pinbot3.MainController">
+    <stylesheets>
+        <URL value="@/pinbot3/styles/style.css"/>
+    </stylesheets>
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>      
+                <VBox BorderPane.alignment="TOP_CENTER">
+                    <MenuBar>
+                        <menus>
+                            <Menu mnemonicParsing="false" text="File">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" text="Close" fx:id="mnuClose" />
+                                </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" style="-fx-float:right;" text="Tools">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" text="Boards manager" fx:id="mnuBoardsMgr" />
+                                    <MenuItem mnemonicParsing="false" text="Keyword Generator" fx:id="mnuKwGen" />
+                                    <MenuItem mnemonicParsing="false" text="Import accounts" fx:id="mnuBtnImport" />  
+                                    <MenuItem mnemonicParsing="false" text="Open logger" fx:id="mnuLogging" />  
+                                    <!--<MenuItem mnemonicParsing="false" text="Debug mode (off)" fx:id="mnuDebug" />  -->
+                                </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" style="-fx-float:right;" text="Help">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" text="Website" fx:id="mnuWebsite" />
+                                    <MenuItem mnemonicParsing="false" text="Tutorials" fx:id="mnuTutorials" />
+                                </items>
+                            </Menu>
+                        </menus>
+                    </MenuBar>
+                    <HBox prefHeight="39.0" style="-margin-left:20px;">
+                        <Button fx:id="btnAdd" onAction="#btnAddClick">Add</Button>
+                        <Button fx:id="btnEdit" onAction="#btnEditClick">Edit</Button>
+                        <Button fx:id="btnStart" onAction="#btnStartClick">Start</Button>
+                        <Button fx:id="btnStop" onAction="#btnStopClick">Stop</Button>
+                        <Button fx:id="btnConfigure" onAction="#btnConfigure_Click">Configure</Button>
+                        <Button fx:id="btnDelete" onAction="#btnDelete_Click">Delete</Button>
+                        <BorderPane.margin>
+                            <Insets />
+                        </BorderPane.margin>
+                        <padding>
+                            <Insets left="10.0" top="5.0" bottom="10" />
+                        </padding>
+                    </HBox>
+                </VBox>
+            </top>
+            <center>
+                <TableView fx:id="tbl">
+                    <columns>
+                        <TableColumn fx:id="tblEmailColumn" text="Email" prefWidth="200">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="Email"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblAccountStatus" text="Status" prefWidth="200">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblPinStatusColumn" text="Pin" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblRepinStatusColumn" text="Repin" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblLikeStatusColumn" text="Like" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblInviteStatusColumn" text="Invite" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblFollowStatusColumn" text="Follow" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblUnfollowStatusColumn" text="Unfollow" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblCommentStatusColumn" text="Comment" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblMessageStatusColumn" text="Message" prefWidth="140">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="status"></PropertyValueFactory> 
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </center>
+            <bottom>
+                <VBox prefHeight="45" alignment="CENTER" >
+                    <FlowPane fx:id="statusbox">
+                        <Button fx:id="btnUpdate" onAction="#btnUpdateClick" text="Update available!" style="-fx-background-color:#18C939; -fx-foreground-color:white;">
+                            <HBox.margin>
+                                <Insets right="10" left="10" /> 
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnRefresh" onAction="#btnRefreshClick">
+                            <HBox.margin>
+                                <Insets right="10" left="10" /> 
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="lblStats" alignment="BOTTOM_CENTER" prefHeight="25"  text="Followers: 0   Following: 0   Likes: 0   Pins: 0   Boards: 0" />
+                    </FlowPane>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

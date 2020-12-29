@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane  xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pinbot3.KeywordGenController">
+    <children>
+        <HBox alignment="CENTER" prefWidth="350" prefHeight="410"  >
+            <VBox>
+                
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0"  />
+                    </columnConstraints>
+                    <children>
+                        <Label text="Keyword:" prefWidth="100" GridPane.columnIndex="0" />
+                        <TextField fx:id="txtKw" maxWidth="350" GridPane.columnIndex="1"></TextField> 
+                    </children>
+                    <VBox.margin>
+                        <Insets top="15" bottom="5" /> 
+                    </VBox.margin>
+                </GridPane>
+                <HBox alignment="CENTER">
+                    <TextArea prefHeight="300" prefWidth="290" fx:id="txtKws"  />
+                </HBox>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints prefHeight="20" /> 
+                        <RowConstraints prefHeight="60" /> 
+                    </rowConstraints>
+                    <children>                        
+                        <CheckBox text="Deep search" fx:id="chkMultiLevel" GridPane.columnIndex="0" GridPane.rowIndex="0"  /> 
+                        <Button text="Copy all" fx:id="btnCopy" GridPane.columnIndex="1" GridPane.rowIndex="0"  />                         
+                        <Button text="Generate" fx:id="btnGen" GridPane.columnIndex="2" GridPane.rowIndex="0"  />                         
+                        <Label text="status" fx:id="lblStatus" GridPane.columnIndex="0" GridPane.rowIndex="1"   />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10" /> 
+                    </VBox.margin>
+                </GridPane>
+            </VBox>
+        </HBox>
+    </children>
+
+</AnchorPane>

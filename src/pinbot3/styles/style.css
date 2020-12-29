@@ -1,0 +1,55 @@
+
+
+#btnStart  {
+    -fx-graphic: url("../imgs/start.png"); 
+}
+
+#btnStop {
+    -fx-graphic: url("../imgs/stop.png"); 
+}
+
+#btnPause  {
+    -fx-graphic: url("../imgs/pause.png"); 
+}
+
+#btnAdd  {
+    -fx-graphic: url("../imgs/plus.png"); 
+}
+
+#btnEdit  {
+    -fx-graphic: url("../imgs/edit.png"); 
+}
+
+#btnConfigure  {
+    -fx-graphic: url("../imgs/cog.png"); 
+}
+
+#btnDelete  {
+    -fx-graphic: url("../imgs/delete.png"); 
+}
+
+#btnSave  {
+    -fx-graphic: url("../imgs/save.png"); 
+}
+
+#btnRefresh  {
+    -fx-graphic: url("../imgs/refresh.png"); 
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.bordered-titled-title {
+  -fx-translate-y: -10; /* play around with this value when changing the title font to get a vertically centered title */
+  -fx-background-color: #F4F4F4;
+}
+
+.bordered-titled-border {
+  -fx-content-display: top;
+  -fx-border-color: #CFCFCF;
+  -fx-border-radius: 5;
+  -fx-background-radius: 5;
+  -fx-border-width: 1;
+}
+

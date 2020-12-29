@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import pinbot3.configurations.*?>
+<?import java.net.*?>
+
+<AnchorPane id="AnchorPane" minHeight="300.0" minWidth="300.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pinbot3.ConfigurationsController">
+    <stylesheets>
+        <URL value="@/pinbot3/styles/style.css" />
+    </stylesheets>
+    <ScrollPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <VBox minHeight="550.0" minWidth="800.0">
+            <HBox>
+                <Label text="Select campaign:   " />
+                <ChoiceBox fx:id="cboCampaign" prefHeight="20" prefWidth="200" >
+                </ChoiceBox>
+                <HBox layoutX="405.0" layoutY="336.0">
+                    <Button fx:id="btnAdd" text="Add..." />
+                    <Button fx:id="btnEdit" text="Edit" />
+                    <Button fx:id="btnDelete" text="Delete" />
+                    <Button fx:id="btnSave" text="Save" />
+                    <HBox.margin>
+                        <Insets left="15" /> 
+                    </HBox.margin>
+                </HBox>
+                <padding>
+                    <Insets bottom="10" left="20.0" top="20.0" />
+                </padding>
+            
+            </HBox>
+            <HBox prefHeight="40" >
+                <Label fx:id="lblStatus">
+                    <HBox.margin>
+                        <Insets left="20" /> 
+                    </HBox.margin>
+                </Label>
+            </HBox>
+            <TabPane minWidth="980" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                <tabs>
+                    <Tab fx:id="cfPin" text=" Pin ">
+                    
+                    </Tab>
+                    <Tab fx:id="cfRepin" text=" Repin ">
+                    
+                    </Tab>
+                    <Tab fx:id="cfLike" text=" Like ">
+                   
+                    </Tab>
+                    <Tab fx:id="cfInvite" text=" Invite ">
+                   
+                    </Tab>
+                    <Tab fx:id="cfFollow" text=" Follow ">
+                    
+                    </Tab>
+                    <Tab fx:id="cfUnfollow" text=" Unfollow ">
+                   
+                    </Tab>
+                    <Tab fx:id="cfComment" text=" Comment ">
+                    
+                    </Tab>
+                    <Tab fx:id="cfMessage" text=" Message ">
+                    
+                    </Tab>
+                
+                </tabs>
+            </TabPane>
+        </VBox>     
+    </ScrollPane>
+</AnchorPane>

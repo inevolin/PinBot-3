@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" accessibleRole="MENU" mouseTransparent="true" prefHeight="600" prefWidth="600" style="-fx-background-color: rgba(255,255,255,0);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pinbot3.LoaderController">
+    <stylesheets>
+        <URL value="@/pinbot3/styles/style.css" />
+    </stylesheets>
+   <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="1.0">
+      <image>
+         <Image url="@../imgs/loading-screen-pb3.png" />
+      </image>
+   </ImageView>
+    <Label fx:id="lbl" layoutX="128.0" layoutY="274.0" style="-fx-background-color: transparent;" text="Loading..." textFill="#fbfbfb">
+      <font>
+         <Font size="17.0" />
+      </font></Label>
+   <Label layoutX="394.0" layoutY="300.0" text="healzer.com" textFill="#fbfbfb">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Label>
+   <Label layoutX="394.0" layoutY="274.0" style="-fx-font-weight: bold; -fx-font-size: 17px;" text="Pinbot 3.0" textFill="#fbfbfb">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>

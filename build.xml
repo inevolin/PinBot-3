@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PinBot3" default="default" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <description>Builds, tests, and runs the project PinBot3.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <!--<target name="-post-jar">
+        <jar jarfile="dist/Combined-dist.jar">
+            <zipfileset src="${dist.jar}" excludes="META-INF/*" />
+            <zipfileset src="apache_http/commons-codec-1.9.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/commons-logging-1.2.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/fluent-hc-4.5.2.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/httpclient-4.5.2.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/httpclient-cache-4.5.2.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/httpclient-win-4.5.2.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/httpcore-4.4.4.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/httpmime-4.5.2.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/jna-4.1.0.jar" excludes="META-INF/*" />
+            <zipfileset src="apache_http/jna-platform-4.1.0.jar" excludes="META-INF/*" />
+            <manifest>
+                <attribute name="Main-Class" value="com.example.mypackage.Main"/>
+            </manifest>
+        </jar>
+    </target>-->
+</project>

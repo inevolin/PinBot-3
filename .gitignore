@@ -1,0 +1,23 @@
+db/*
+db/
+nbproject/private/
+nbproject/private/private.properties
+nbproject/private/private.xml
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+derby.log
+*.class
+*.jar
+*.war
+*.ear
+/db philip/
+/db philip/*
+/db3/
+/db3/*
+/db3 - Copy/*
+/db3 - Copy/
+.js
