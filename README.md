@@ -1,4 +1,4 @@
-# PinBot 3.0 (2017)
+# PinBot 3.0 (2016)
 
 Pinterest Automation Software interesting for internet marketers and entrepreneurs. 
 
